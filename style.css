@@ -175,7 +175,28 @@ p {
     /* display: "none"; */
     visibility: hidden;
 }
-
+#catPic {
+    position: absolute;
+    top: 620px;
+    left: 300px;
+    background-color: transparent;
+    visibility: hidden;
+}
+#daisyPic {
+    position: absolute;
+    top: 500px;
+    left: 280px;
+    background-color: transparent;
+    visibility: hidden;
+    size-adjust: 75%;
+}
+#sunflowerPic {
+    position: absolute;
+    top: 525px;
+    left: 300px;
+    background-color: transparent;
+    visibility: hidden;
+}
 .navbar {
     display: flex;
     justify-content: space-evenly;

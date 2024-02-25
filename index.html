@@ -32,6 +32,11 @@
         <img id="islandPicture" src="Animals/Main Island.png">
         <img id="pandaPic" src="/Animals/Clear Panda Head.png" class="overlay">
         <img id="dogPic" src="/Animals/DogTransparent.png" class="overlay">
+        <img id="catPic" src="/Animals/CatClear.png" class="overlay">
+        <img id="daisyPic" src="/Animals/PurpleDaisyClear1.png" class="overlay">
+        <img id="sunflowerPic" src="/Animals/SunflowerClear.png" class="overlay">
+
+
         <script> 
             // Check if the style needs to be changed
             if (localStorage.getItem('pandaStyle') === 'true') {
@@ -43,6 +48,21 @@
             if (localStorage.getItem('dogStyle') === 'true') {
                 var image = document.getElementById('dogPic');
                 document.getElementById('output').innerHTML = window.coin - 500;
+                image.style.visibility = "visible";
+            }
+            if (localStorage.getItem('catStyle') === 'true') {
+                var image = document.getElementById('catPic');
+                document.getElementById('output').innerHTML = window.coin - 600;
+                image.style.visibility = "visible";
+            }
+            if (localStorage.getItem('daisyStyle') === 'true') {
+                var image = document.getElementById('daisyPic');
+                document.getElementById('output').innerHTML = window.coin - 300;
+                image.style.visibility = "visible";
+            }
+            if (localStorage.getItem('sunflowerStyle') === 'true') {
+                var image = document.getElementById('sunflowerPic');
+                document.getElementById('output').innerHTML = window.coin - 350;
                 image.style.visibility = "visible";
             }
         </script>
