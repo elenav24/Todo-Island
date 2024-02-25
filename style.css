@@ -10,7 +10,12 @@
 /* CSS for shop.css */
 
 #Title {
-    color: blue;
+    color: lightblue;
+    font-size: 60px;
+}
+#Coins {
+    color: lightblue;
+    font-size: 60px;
 
 }
 #profile {
@@ -131,4 +136,18 @@ p {
     /* opacity: 0;  */
     /* display: "none"; */
     visibility: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 40px;
+    color: lightblue;
+    justify-items: center;
+    height: 100px;
+    color: transparent;
+}
+#listimg {
+    background-color: transparent;
+    padding-top: 40px;
 }
