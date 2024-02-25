@@ -15,7 +15,10 @@
             <img id="listimg" src="Animals/Shopping Logo.png">
         </a>
     <p id="Title">To-Do Island</p>
-    <p id="Coins">Coins: 320</p>
+    <p id="Coins">Coins: <span id="output"></span></p>
+    <!-- <script>
+        document.getElementById('output').innerHTML = number;
+    </script> -->
     <a href="list.html">
         <img id="listimg" src="Animals/List.png">
     </a>
@@ -28,6 +31,8 @@
             // Check if the style needs to be changed
             if (localStorage.getItem('pandaStyle') === 'true') {
                 var image = document.getElementById('pandaPic');
+                console.log(coins);
+                document.getElementById('output').innerHTML = coins;
                 image.style.visibility = "visible";
             }
             if (localStorage.getItem('dogStyle') === 'true') {
