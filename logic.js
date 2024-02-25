@@ -1,8 +1,7 @@
-function showPhoto() {
-    var photoElement = document.getElementById("pandaPic");
-
-    photoElement.style.visibility = "visible";
+function showPanda() {
+    localStorage.setItem('pandaStyle', 'true');
 }
-function changeStyleOnOtherPage() {
-    localStorage.setItem('changeStyle', 'true');
+
+function showDog() {
+    localStorage.setItem('dogStyle', 'true');
 }

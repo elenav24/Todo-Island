@@ -123,6 +123,12 @@ p {
     margin-top: 50px;
     background-color: rgb(58, 78, 191);
 }
-#pandaHead {
+#dogPic {
+    position: absolute;
+    top: 550px;
+    left: 500px;
+    background-color: transparent;
+    /* opacity: 0;  */
+    /* display: "none"; */
     visibility: hidden;
 }

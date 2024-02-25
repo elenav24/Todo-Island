@@ -18,14 +18,18 @@
     <div class="island"> 
         <img id="islandPicture" src="Animals/Main Island.png">
         <img id="pandaPic" src="/Animals/Clear Panda Head.png" class="overlay">
+        <img id="dogPic" src="/Animals/Dog2.0.png" class="overlay">
         <script>
             // Check if the style needs to be changed
-            if (localStorage.getItem('changeStyle') === 'true') {
+            if (localStorage.getItem('pandaStyle') === 'true') {
                 var image = document.getElementById('pandaPic');
-                // Change CSS styles
                 image.style.visibility = "visible";
-                // Reset the flag
-                localStorage.setItem('changeStyle', 'false');
+                localStorage.setItem('pandaStyle', 'false');
+            }
+            if (localStorage.getItem('dogStyle') === 'true') {
+                var image = document.getElementById('dogPic');
+                image.style.visibility = "visible";
+                localStorage.setItem('dogStyle', 'false');
             }
         </script>
     </div>
