@@ -1,25 +1,80 @@
+@font-face {
+    font-family: 'MonsterCookies'; /* Font family name */
+    src: url('MonsterCookies-Regular.otf') format('woff2'), /* Path to font file */
+         url('MonsterCookies-Regular.otf') format('woff');
+    /* Add more src lines if you have additional font formats */
+}
+
+
+
 #Title {
     color: blue;
 
 }
-body {
-    font-family: sans-serif;
+body { 
+    background-color: rgb(58, 78, 191);
+    font-family: 'MonsterCookies';
   }
 
-/* Animal formatting */
-/* Need to add flexboxes*/
-.animal {
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+#todoIsland {
+    color:bisque;
+    display: flex;
+    justify-content: center;
+    font-size: 115px;
+}
+.animalContainer {
+    display: flex;
+    background-color: rgb(154, 154, 183);
+    color: rgb(69, 12, 83);
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+.card {
+    font-size: 20px;
+    width: 250px;
+    background-color: rgb(42, 154, 205); /* Set the background color here */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    align-items: center;
+    width: 200px;
+    margin: 20px;
+    margin-top: 15px;
+    text-align: center;
+    height: 375px;
     padding: 10px;
-    width: 300px;
+    border-color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+    overflow: hidden;
+}
+img {
+    height: auto;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #FD84F1;
+    border-radius: 8px;
 }
 
-.animal h2 {
-    margin-top: 0;
+#addFriend {
+    /* CSS code for styling the button */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: #4CAF50; /* Set background color */
+    color: white; /* Set text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-.animal p {
-    margin-bottom: 5px;
+/* Hover effect */
+#addFriend:hover {
+    background-color: #45a049; /* Darken background color on hover */
 }
-  
