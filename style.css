@@ -168,7 +168,7 @@ p {
 }
 #dogPic {
     position: absolute;
-    top: 550px;
+    top: 520px;
     left: 450px;
     background-color: transparent;
     /* opacity: 0;  */
@@ -177,22 +177,21 @@ p {
 }
 #catPic {
     position: absolute;
-    top: 620px;
-    left: 300px;
+    top: 630px;
+    left: 370px;
     background-color: transparent;
     visibility: hidden;
 }
 #daisyPic {
     position: absolute;
-    top: 500px;
-    left: 280px;
+    top: 590px;
+    left: 170px;
     background-color: transparent;
     visibility: hidden;
-    size-adjust: 75%;
 }
 #sunflowerPic {
     position: absolute;
-    top: 525px;
+    top: 535px;
     left: 300px;
     background-color: transparent;
     visibility: hidden;

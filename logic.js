@@ -26,7 +26,7 @@ function showCat() {
 }
 function showDaisy() {
     if (window.coin >= 300) {
-        localStorage.setItem('daistStyle', 'true');
+        localStorage.setItem('daisyStyle', 'true');
         window.coin -= 300;
         console.log(coin);
         document.getElementById('output').innerHTML = coin;
