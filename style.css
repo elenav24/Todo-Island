@@ -168,7 +168,7 @@ p {
 }
 #dogPic {
     position: absolute;
-    top: 520px;
+    top: 550px;
     left: 450px;
     background-color: transparent;
     /* opacity: 0;  */
@@ -177,21 +177,22 @@ p {
 }
 #catPic {
     position: absolute;
-    top: 630px;
-    left: 370px;
+    top: 620px;
+    left: 300px;
     background-color: transparent;
     visibility: hidden;
 }
 #daisyPic {
     position: absolute;
-    top: 590px;
-    left: 170px;
+    top: 500px;
+    left: 280px;
     background-color: transparent;
     visibility: hidden;
+    size-adjust: 75%;
 }
 #sunflowerPic {
     position: absolute;
-    top: 535px;
+    top: 525px;
     left: 300px;
     background-color: transparent;
     visibility: hidden;
@@ -209,3 +210,25 @@ p {
     background-color: transparent;
     padding-top: 40px;
 }
+#listButton {
+        padding: 10px 20px; /* Adjust padding as needed */
+        font-size: 20px; /* Adjust font size as needed */
+        color: rgb(11, 62, 79); /* Set text color */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        font-family: 'MonsterCookies'; /* Use custom font */
+    }
+
+    #taskInput {
+        padding: 10px 20px; /* Adjust padding as needed */
+        margin-right: 10px;
+        font-size: 20px; /* Adjust font size as needed */
+        /* color: white; Set text color */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Add border radius for rounded corners */
+        cursor: pointer; /* Change cursor to pointer on hover */
+        font-family: 'MonsterCookies'; /* Use custom font */
+    }
+    
+    /* Hover effect */
