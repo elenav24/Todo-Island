@@ -2,18 +2,21 @@
 window.coin = 10000;
 //document.getElementById('output').innerHTML = window.coin;
 function showPanda() {
-    if (coins >= 750){
+    if (window.coin >= 750){
         localStorage.setItem('pandaStyle', 'true');
-        coins -= 750;
+        window.coin -= 750;
         console.log(coins);
-        coins = 200;
         document.getElementById('output').innerHTML = coins;
-        coin += 2000;
     }
 }
 
 function showDog() {
     localStorage.setItem('dogStyle', 'true');
+    if (window.coin >= 500) {
+        console.log(coins);
+        window.coin -= 750;
+        document.getElementById('output').innerHTML = coins;
+    }
 }
 
 

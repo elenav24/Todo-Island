@@ -17,8 +17,8 @@
     <p id="Title">To-Do Island</p>
     <p id="Coins">Coins: <span id="output"></span></p>
     <script>
-        // window.coin = 100;
-        // document.getElementById('output').innerHTML = window.coin;
+        window.coin = 1000;
+        document.getElementById('output').innerHTML = window.coin;
         // console.log(coin);
     </script>
     <!-- <script>
@@ -37,7 +37,7 @@
             if (localStorage.getItem('pandaStyle') === 'true') {
                 var image = document.getElementById('pandaPic');
                 console.log(coin);
-                // document.getElementById('output').innerHTML = window.coin - 750;
+                document.getElementById('output').innerHTML = window.coin - 750;
                 image.style.visibility = "visible";
             }
             if (localStorage.getItem('dogStyle') === 'true') {
