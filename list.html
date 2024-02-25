@@ -7,9 +7,11 @@
     <style>
         body {
       font-family: Arial, sans-serif;
+      text-align: center;
     }
+
     #todoList {
-      list-style: none;
+      list-style-type: circle;
       padding: 0;
     }
 
@@ -42,11 +44,13 @@
     var task = taskInput.value.trim();
 
     if (task) {
-      // Create a new task list item
+      // Create a new task list item with a checkbox
       var ul = document.getElementById("todoList");
       var li = document.createElement("li");
-      li.appendChild(document.createTextNode(task));
-
+      li.innerHTML = `
+        <input type="checkbox" onchange="updateTaskStatus(this)">
+        <span>${task}</span>
+      `;
       // Save the task to localStorage
       saveTask(task);
 
@@ -55,6 +59,17 @@
       // Clear the input field
       taskInput.value = "";
     }
+  }
+  function updateTaskStatus(checkbox) {
+    var task = checkbox.nextSibling.textContent;
+    var tasks = getTasksFromStorage();
+
+    tasks = tasks.map(function(t) {
+    if (t === task) {
+        return checkbox.checked ? "[DONE] " + t : t.replace("[DONE] ", "");
+    }
+    return t;
+});
   }
 
   function saveTask(task) {
