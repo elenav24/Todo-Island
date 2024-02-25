@@ -168,8 +168,8 @@ p {
 }
 #dogPic {
     position: absolute;
-    top: 550px;
-    left: 450px;
+    top: 525px;
+    left: 460px;
     background-color: transparent;
     /* opacity: 0;  */
     /* display: "none"; */
@@ -177,25 +177,32 @@ p {
 }
 #catPic {
     position: absolute;
-    top: 620px;
-    left: 300px;
+    top: 630px;
+    left: 370px;
     background-color: transparent;
     visibility: hidden;
 }
 #daisyPic {
     position: absolute;
     top: 590px;
-    left: 170px;
+    left: 190px;
     background-color: transparent;
     visibility: hidden;
     size-adjust: 75%;
 }
 #sunflowerPic {
     position: absolute;
-    top: 525px;
+    top: 530px;
     left: 300px;
     background-color: transparent;
     visibility: hidden;
+}
+#neonSign {
+    position: absolute;
+    top: 400px;
+    left: 10px;
+    background-color: transparent;
+    visibility: visible;
 }
 .navbar {
     display: flex;
