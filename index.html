@@ -6,7 +6,7 @@
         <title>ToDo Island</title>
         <link rel="stylesheet" href="style.css">
         <script src="animals.js"></script>
-        <script src="logic.js"></script>
+        <script src="logic.js" defer></script>
         <link rel="shop" href="shop.html">
 </head>
 <body>
@@ -14,14 +14,20 @@
     <a href="shop.html">
         <button id="Shop">SHOP</button>
     </a>
-    <button id="Account">PROFILE</button>
-    <div class="showpanda"> 
+    <button id="profile" onclick="showPhoto()">PROFILE</button>
+    <div class="island"> 
         <img id="islandPicture" src="Animals/Main Island.png">
-        <img id="panda" src="/Animals/Clear Panda Head.png" class="overlay">
-    </div>
-    <div class="showdog">
-        <img id="islandPicture" src="Animals/Main Island.png">
-        <img id="Dog2" src="/Animals/Dog2.0.png" class="overlay">
+        <img id="pandaPic" src="/Animals/Clear Panda Head.png" class="overlay">
+        <script>
+            // Check if the style needs to be changed
+            if (localStorage.getItem('changeStyle') === 'true') {
+                var image = document.getElementById('pandaPic');
+                // Change CSS styles
+                image.style.visibility = "visible";
+                // Reset the flag
+                localStorage.setItem('changeStyle', 'false');
+            }
+        </script>
     </div>
 </body>
 </html>
