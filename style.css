@@ -73,6 +73,44 @@ img {
     border-radius: 8px;
 }
 
+#todoList {
+    list-style-type: circle;
+    padding: 0;
+    align-items: center;
+  }
+
+  #todoList li {
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+.navList {
+    display: flex;
+    align-items: center;
+    background-color: rgb(58, 78, 191);
+}
+
+#ToDoHead {
+    color: lightblue;
+    font-size: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskAdd {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: medium;
+}
+
+#todoList {
+    color: white;
+    font-size: 30px;
+}
+
 .addFriend {
     /* CSS code for styling the button */
     padding: 10px 20px; /* Adjust padding as needed */

@@ -4,39 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <style>
-        body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    #todoList {
-      list-style-type: circle;
-      padding: 0;
-    }
-
-    #todoList li {
-      margin-bottom: 10px;
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+  <div class="navList"> 
     <a href="index.html">
-        <img src="Animals/Arrow.png">
+       <img id="Arrow" src="/Animals/Arrow.png" alt="Back Button">
     </a>
-    <h2>My To-Do List</h2>
+</div>
+  <h1 id="ToDoHead">My To-Do List</h1>
 
-<input type="text" id="taskInput" placeholder="Add a new task">
-<button onclick="addTask()">Add Task</button>
-
-<ul id="todoList">
-  <!-- Tasks will be dynamically added here using JavaScript -->
-</ul>
+<body>
+<div class="taskAdd">
+  <input type="text" id="taskInput" placeholder="Add a new task">
+  <button onclick="addTask()">Add Task</button>
+  <ul id="todoList">
+    <!-- Tasks will be dynamically added here using JavaScript -->
+  </ul>
+</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     // Load tasks from localStorage on page load
     loadTasks();
+    checkLastRecordedDate();
   });
 
   function addTask() {
@@ -52,7 +42,7 @@
         <span>${task}</span>
       `;
       // Save the task to localStorage
-      saveTask(task);
+      saveTask(task, false);
 
       ul.appendChild(li);
 
@@ -70,13 +60,15 @@
     }
     return t;
 });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    checkCompletionStatus();
   }
 
-  function saveTask(task) {
+  function saveTask(task, done) {
     var tasks = getTasksFromStorage();
 
     // Add the new task to the tasks array
-    tasks.push(task);
+    tasks.push({ task: task, done: done });
 
     // Save the updated tasks array back to localStorage
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -88,9 +80,12 @@
     // Populate the to-do list with tasks from localStorage
     var ul = document.getElementById("todoList");
 
-    tasks.forEach(function(task) {
+    tasks.forEach(function(t) {
       var li = document.createElement("li");
-      li.appendChild(document.createTextNode(task));
+      li.innerHTML = `
+        <input type="checkbox" onchange="updateTaskStatus(this)" ${t.done ? "checked" : ""}>
+        <span>${t.task}</span>
+      `;
       ul.appendChild(li);
     });
   }
@@ -100,6 +95,44 @@
     var tasks = localStorage.getItem("tasks");
     return tasks ? JSON.parse(tasks) : [];
   }
+
+  function checkLastRecordedDate() {
+    var lastRecordedDate = localStorage.getItem("lastRecordedDate");
+    var currentDate = new Date().toLocaleDateString();
+
+    // Check if it's a new day
+    if (lastRecordedDate !== currentDate) {
+      // Clear the checklist for a new day
+      clearChecklist();
+      // Update the last recorded date
+      localStorage.setItem("lastRecordedDate", currentDate);
+    }
+  }
+
+  function checkCompletionStatus() {
+    var tasks = getTasksFromStorage();
+    var allCompleted = tasks.every(function(t) {
+      return t.done;
+    });
+
+    if (allCompleted) {
+      localStorage.setItem("allTasksCompleted", "true");
+      window.coin += 100;
+    } else {
+      localStorage.removeItem("allTasksCompleted");
+    }
+  }
+
+  function clearChecklist() {
+    // Clear the tasks in localStorage
+    localStorage.removeItem("tasks");
+
+    // Clear the tasks in the DOM
+    var ul = document.getElementById("todoList");
+    ul.innerHTML = "";
+  }
 </script>
+
+
 </body>
 </html>

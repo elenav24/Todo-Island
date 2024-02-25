@@ -1,5 +1,4 @@
 
-window.coin = 10000;
 //document.getElementById('output').innerHTML = window.coin;
 function showPanda() {
     if (window.coin >= 750){
@@ -18,6 +17,7 @@ function showDog() {
         document.getElementById('output').innerHTML = coin;
     }
 }
+
 
 
 document.getElementById('output').innerHTML = coins;
