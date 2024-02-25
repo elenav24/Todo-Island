@@ -13,6 +13,9 @@
     color: blue;
 
 }
+#profile {
+    color: white;
+}
 body { 
     background-color: rgb(58, 78, 191);
     font-family: 'MonsterCookies';
@@ -65,7 +68,7 @@ img {
     border-radius: 8px;
 }
 
-#addFriend {
+.addFriend {
     /* CSS code for styling the button */
     padding: 10px 20px; /* Adjust padding as needed */
     font-size: 20px; /* Adjust font size as needed */
@@ -78,7 +81,7 @@ img {
 }
 
 /* Hover effect */
-#addFriend:hover {
+.addFriend:hover {
     background-color: #45a049; /* Darken background color on hover */
 }
 
@@ -90,13 +93,14 @@ img {
 
 #Arrow {
     background-color: rgb(58, 78, 191);
+    opacity: 1.0;
 }
 p {
     margin-bottom: 5px;
 
 }
 
-#showpanda {
+#island {
     position: relative;
 }
 
@@ -104,16 +108,21 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.5; 
+    z-index: 1;
 }
-#panda {
+#pandaPic {
     position: absolute;
     top: 470px;
     left: 600px;
-    z-index: 1;
     background-color: transparent;
+    /* opacity: 0;  */
+    /* display: "none"; */
+    visibility: hidden;
 }
 #islandPicture {
     margin-top: 50px;
     background-color: rgb(58, 78, 191);
+}
+#pandaHead {
+    visibility: hidden;
 }
