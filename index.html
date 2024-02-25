@@ -16,6 +16,11 @@
         </a>
     <p id="Title">To-Do Island</p>
     <p id="Coins">Coins: <span id="output"></span></p>
+    <script>
+        // window.coin = 100;
+        // document.getElementById('output').innerHTML = window.coin;
+        // console.log(coin);
+    </script>
     <!-- <script>
         document.getElementById('output').innerHTML = number;
     </script> -->
@@ -27,12 +32,12 @@
         <img id="islandPicture" src="Animals/Main Island.png">
         <img id="pandaPic" src="/Animals/Clear Panda Head.png" class="overlay">
         <img id="dogPic" src="/Animals/DogTransparent.png" class="overlay">
-        <script>
+        <script> 
             // Check if the style needs to be changed
             if (localStorage.getItem('pandaStyle') === 'true') {
                 var image = document.getElementById('pandaPic');
-                console.log(coins);
-                document.getElementById('output').innerHTML = coins;
+                console.log(coin);
+                // document.getElementById('output').innerHTML = window.coin - 750;
                 image.style.visibility = "visible";
             }
             if (localStorage.getItem('dogStyle') === 'true') {

@@ -1,10 +1,14 @@
 
-var coins = 1000;
+window.coin = 10000;
+//document.getElementById('output').innerHTML = window.coin;
 function showPanda() {
     if (coins >= 750){
         localStorage.setItem('pandaStyle', 'true');
         coins -= 750;
+        console.log(coins);
+        coins = 200;
         document.getElementById('output').innerHTML = coins;
+        coin += 2000;
     }
 }
 
