@@ -5,17 +5,17 @@ function showPanda() {
     if (window.coin >= 750){
         localStorage.setItem('pandaStyle', 'true');
         window.coin -= 750;
-        console.log(coins);
-        document.getElementById('output').innerHTML = coins;
+        console.log(coin);
+        document.getElementById('output').innerHTML = coin;
     }
 }
 
 function showDog() {
-    localStorage.setItem('dogStyle', 'true');
     if (window.coin >= 500) {
-        console.log(coins);
-        window.coin -= 750;
-        document.getElementById('output').innerHTML = coins;
+        localStorage.setItem('dogStyle', 'true');
+        window.coin -= 500;
+        console.log(coin);
+        document.getElementById('output').innerHTML = coin;
     }
 }
 

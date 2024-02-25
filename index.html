@@ -17,7 +17,7 @@
     <p id="Title">To-Do Island</p>
     <p id="Coins">Coins: <span id="output"></span></p>
     <script>
-        window.coin = 1000;
+        window.coin = 10;
         document.getElementById('output').innerHTML = window.coin;
         // console.log(coin);
     </script>
@@ -42,6 +42,7 @@
             }
             if (localStorage.getItem('dogStyle') === 'true') {
                 var image = document.getElementById('dogPic');
+                document.getElementById('output').innerHTML = window.coin - 500;
                 image.style.visibility = "visible";
             }
         </script>
