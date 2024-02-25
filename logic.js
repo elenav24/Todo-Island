@@ -40,6 +40,14 @@ function showSunflower() {
         console.log(coin);
     }
 }
+function showMouse() {
+    if (window.coin >= 450) {
+        localStorage.setItem('mouseStyle', 'true');
+        window.coin -= 450;
+        document.getElementById('output').innerHTML = coin;
+        console.log(coin);
+    }
+}
 
 
 document.getElementById('output').innerHTML = coins;

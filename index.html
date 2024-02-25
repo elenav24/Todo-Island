@@ -36,6 +36,7 @@
         <img id="daisyPic" src="/Animals/PurpleDaisyClear1.png" class="overlay">
         <img id="sunflowerPic" src="/Animals/SunflowerClear.png" class="overlay">
         <img id="neonSign" src="/Animals/NeonSign.png" class="overlay">
+        <img id="mousePic" src="/Animals/MouseClear.png" class="overlay">
 
 
 
@@ -74,6 +75,13 @@
                 var image = document.getElementById('sunflowerPic');
                 if (window.coin >= 350) {
                     document.getElementById('output').innerHTML = window.coin - 350;
+                    image.style.visibility = "visible";
+                }
+            }
+            if (localStorage.getItem('mouseStyle') === 'true' && coin >= 450) {
+                var image = document.getElementById('mousePic');
+                if (window.coin >= 350) {
+                    document.getElementById('output').innerHTML = window.coin - 450;
                     image.style.visibility = "visible";
                 }
             }

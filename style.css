@@ -204,6 +204,13 @@ p {
     background-color: transparent;
     visibility: visible;
 }
+#mousePic {
+    position: absolute;
+    top: 640px;
+    left: 550px;
+    background-color: transparent;
+    visibility: hidden;
+}
 .navbar {
     display: flex;
     justify-content: space-evenly;
