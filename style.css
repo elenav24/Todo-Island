@@ -2,3 +2,24 @@
     color: blue;
 
 }
+body {
+    font-family: sans-serif;
+  }
+
+/* Animal formatting */
+/* Need to add flexboxes*/
+.animal {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+}
+
+.animal h2 {
+    margin-top: 0;
+}
+
+.animal p {
+    margin-bottom: 5px;
+}
+  
