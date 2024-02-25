@@ -39,7 +39,7 @@
 
         <script> 
             // Check if the style needs to be changed
-            if (localStorage.getItem('pandaStyle') === 'true') {
+            if (localStorage.getItem('pandaStyle') === 'true' && coin >= 750) {
                 var image = document.getElementById('pandaPic');
                 console.log(coin);
                 if (window.coin >= 750) {
@@ -47,28 +47,28 @@
                     image.style.visibility = "visible";
                 }
             }
-            if (localStorage.getItem('dogStyle') === 'true') {
+            if (localStorage.getItem('dogStyle') === 'true' && coin >= 500) {
                 var image = document.getElementById('dogPic');
                 if (window.coin >= 500) {
                     document.getElementById('output').innerHTML = window.coin - 500;
                     image.style.visibility = "visible";
                 }
             }
-            if (localStorage.getItem('catStyle') === 'true') {
+            if (localStorage.getItem('catStyle') === 'true' && coin >= 600) {
                 var image = document.getElementById('catPic');
                 if (window.coin >= 600) {
                     document.getElementById('output').innerHTML = window.coin - 600;
                     image.style.visibility = "visible";
                 }
             }
-            if (localStorage.getItem('daisyStyle') === 'true') {
+            if (localStorage.getItem('daisyStyle') === 'true' && coin >= 300) {
                 var image = document.getElementById('daisyPic');
                 if (window.coin >= 300) {
                     document.getElementById('output').innerHTML = window.coin - 300;
                     image.style.visibility = "visible";
                 }
             }
-            if (localStorage.getItem('sunflowerStyle') === 'true') {
+            if (localStorage.getItem('sunflowerStyle') === 'true' && coin >= 350) {
                 var image = document.getElementById('sunflowerPic');
                 if (window.coin >= 350) {
                     document.getElementById('output').innerHTML = window.coin - 350;
