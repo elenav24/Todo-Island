@@ -36,8 +36,8 @@ function showSunflower() {
     if (window.coin >= 350) {
         localStorage.setItem('sunflowerStyle', 'true');
         window.coin -= 350;
-        console.log(coin);
         document.getElementById('output').innerHTML = coin;
+        console.log(coin);
     }
 }
 

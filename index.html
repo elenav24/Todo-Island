@@ -17,7 +17,7 @@
     <p id="Title">To-Do Island</p>
     <p id="Coins">Coins: <span id="output"></span></p>
     <script>
-        window.coin = 100000;
+        window.coin = 600;
         document.getElementById('output').innerHTML = window.coin;
         // console.log(coin);
     </script>
@@ -42,28 +42,38 @@
             if (localStorage.getItem('pandaStyle') === 'true') {
                 var image = document.getElementById('pandaPic');
                 console.log(coin);
-                document.getElementById('output').innerHTML = window.coin - 750;
-                image.style.visibility = "visible";
+                if (window.coin >= 750) {
+                    document.getElementById('output').innerHTML = window.coin - 750;
+                    image.style.visibility = "visible";
+                }
             }
             if (localStorage.getItem('dogStyle') === 'true') {
                 var image = document.getElementById('dogPic');
-                document.getElementById('output').innerHTML = window.coin - 500;
-                image.style.visibility = "visible";
+                if (window.coin >= 500) {
+                    document.getElementById('output').innerHTML = window.coin - 500;
+                    image.style.visibility = "visible";
+                }
             }
             if (localStorage.getItem('catStyle') === 'true') {
                 var image = document.getElementById('catPic');
-                document.getElementById('output').innerHTML = window.coin - 600;
-                image.style.visibility = "visible";
+                if (window.coin >= 600) {
+                    document.getElementById('output').innerHTML = window.coin - 600;
+                    image.style.visibility = "visible";
+                }
             }
             if (localStorage.getItem('daisyStyle') === 'true') {
                 var image = document.getElementById('daisyPic');
-                document.getElementById('output').innerHTML = window.coin - 300;
-                image.style.visibility = "visible";
+                if (window.coin >= 300) {
+                    document.getElementById('output').innerHTML = window.coin - 300;
+                    image.style.visibility = "visible";
+                }
             }
             if (localStorage.getItem('sunflowerStyle') === 'true') {
                 var image = document.getElementById('sunflowerPic');
-                document.getElementById('output').innerHTML = window.coin - 350;
-                image.style.visibility = "visible";
+                if (window.coin >= 350) {
+                    document.getElementById('output').innerHTML = window.coin - 350;
+                    image.style.visibility = "visible";
+                }
             }
         </script>
     </div>
